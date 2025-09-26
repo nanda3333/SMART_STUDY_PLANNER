@@ -1,0 +1,102 @@
+*{box-sizing:border-box}body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;padding:0;background:linear-gradient(135deg, #e0f7fa, #e1bee7);color:#111}
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid #e3e8ef;background:#ffd700}
+h1{margin:0;font-size:1.25rem}
+.controls{display:flex;gap:.5rem;align-items:center}
+main{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding:1rem}
+.new-task, .tasks, .timeline{background:#e6fff5;padding:1rem;border:1px solid #e6fff5;border-radius:8px}
+.new-task form{display:flex;flex-direction:column;gap:.5rem}
+.new-task input, .new-task select{padding:.5rem;border:1px solid #d7dde6;border-radius:6px}
+.new-task button{padding:.6rem;border:none;border-radius:6px;background:#2b7cff;color:white;cursor:pointer}
+#taskList{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.task{display:flex;align-items:center;justify-content:space-between;padding:.5rem;border-radius:6px;border:1px solid #eef3fb}
+.task .left{display:flex;gap:.75rem;align-items:center}
+.task .meta{font-size:.9rem;color:#334}
+.checkbox{margin-right:.25rem}
+.tag{padding:.2rem .5rem;border-radius:4px;font-size:.8rem}
+.tag.low{background:#e6f3ff;color:#035}
+.tag.medium{background:#fff4e6;color:#7a4b00}
+.tag.high{background:#ffeef0;color:#7a0017}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem}
+.grid .day{padding:.5rem;border-radius:6px;border:1px dashed #e6eaf0;min-height:80px;background:#fff}
+footer{padding:1rem;text-align:center;color:#667}
+@media(max-width:900px){main{grid-template-columns:1fr}header{flex-direction:column;gap:.5rem}}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #212121, #424242);
+    color: #f5f5f5;
+}
+
+body.dark-mode header {
+    background: #333;
+    color: #f5f5f5;
+}
+
+body.dark-mode .new-task,
+body.dark-mode .tasks,
+body.dark-mode .timeline {
+    background: #424242;
+    border-color: #555;
+}
+
+
+/* === New Attractive Color Theme === */
+
+/* Body background */
+body {
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e6f0ff, #0000FF);
+  color: #1e293b;
+}
+
+/* Cards (task sections, timeline, etc.) */
+.new-task, .tasks, .timeline {
+  background: #38EF7D;
+  border: 1px solid #dbe2ef;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Buttons */
+button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #2563eb;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: linear-gradient(135deg, #0f172a, #FFD700);
+  color: #e2e8f0;
+}
+.dark-mode .new-task,
+.dark-mode .tasks,
+.dark-mode .timeline {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+.dark-mode button {
+  background: #06b6d4;
+}
+.dark-mode button:hover {
+  background: #0891b2;
+}

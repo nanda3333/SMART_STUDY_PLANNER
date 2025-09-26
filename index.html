@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Study Planner</h1>
+    <div class="controls">
+      <button id="themeToggle">🌙 Dark Mode</button>
+      <button id="exportBtn">Export JSON</button>
+      <input id="importFile" type="file" accept=".json" />
+    </div>
+  </header>
+
+  <main>
+    <section class="new-task" bgcolor="#FFD700">
+      <label for="taskTime">Task Time:</label>
+      <input type="datetime-local" id="taskTime" />
+      <h2>Add Study Task</h2>
+      <form id="taskForm">
+        <input id="title" placeholder="Task title" required />
+        <input id="subject" placeholder="Subject / Course" />
+        <input id="dueDate" type="date" />
+        <input id="dueTime" type="time" />
+        <select id="priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <label><input id="reminder" type="checkbox" /> Reminder (while page open)</label>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section class="tasks">
+      <h2>Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="timeline">
+      <h2>Timeline (7 days)</h2>
+      <div id="timelineGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Data saved locally in your browser (localStorage).</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
