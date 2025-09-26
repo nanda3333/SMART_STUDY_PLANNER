@@ -9,9 +9,5 @@ Features:
 - Simple 7-day timeline view.
 - Delete tasks and mark as done.
 
-How to use:
-1. Unzip and open `index.html` in your browser.
-2. Grant Notification permission if you want reminders while the page is open.
-3. Use Export to save a JSON backup.
 
 Note: Reminders only work when the page is open (this is a browser limitation for simple client-side apps).
